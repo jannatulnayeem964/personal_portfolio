@@ -1,0 +1,479 @@
+@font-face {
+    font-family: 'Game Playa';
+    src: url('fonts/glitch-goblin-font/gameplaya-font/Gameplaya-rgnAL.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+
+    background-color: white;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: Arial;
+    font-size: 16px;
+    color: black;
+
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+
+    margin-top: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 0;
+
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden; /* This prevents horizontal scrolling if not needed */
+    overflow-y: auto;
+}
+
+.background-container,
+.background-image {
+    display: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    padding: 10px 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+.navbar-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.navbar-nav li {
+    margin-right: 20px;
+}
+.navbar-nav a {
+    color: #D8DEE9;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.navbar-nav a:hover {
+    color: #88C0D0;
+}
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+.social-icons a {
+    margin-left: 15px;
+}
+.social-icons svg {
+    width: 20px;
+    height: 20px;
+    fill: #D8DEE9;
+    transition: fill 0.3s ease;
+}
+.social-icons a:hover svg {
+    fill: #88C0D0;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-nav {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+    .navbar-nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+    .social-icons a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    .header-container {
+        padding-top: 120px; /* Increase top padding to account for stacked navbar */
+    }
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+
+.content {
+    font-family: 'Game Playa';
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow: 
+        0 1px 0 #4bc6e4,
+        0 2px 0 #e264bd,
+        0 3px 0 #120b0b,
+        0 4px 0 #24a7d7;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 8px #ecb2de7c;
+    paint-order: stroke fill;
+    transform: scale(1, 1.5);
+    position: relative;
+    z-index: 1;
+    pointer-events: auto;
+    padding-top: 300px; /* Increase padding for mobile to account for stacked navbar */
+}
+
+.header-container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.background-tilt {
+    position: absolute;
+    top: -5%; /* Slightly larger than the container to allow for tilt */
+    left: -5%;
+    right: -5%;
+    bottom: -5%;
+    background-image: url('images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.1s ease-out;
+    z-index: -1;
+}
+
+.header-container h1,
+.header-container p {
+    margin: 0; /* Remove default margins */
+    padding: 5px 0; /* Add a small vertical padding for minimal separation */
+    max-width: 100%; /* Add a small padding for minimal separation */
+}
+
+.header-container h1 {
+    margin-bottom: 10px; /* Add some space after the main heading if needed */
+}
+
+
+#about {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-description {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.about-img {
+    flex: 0 0 300px;
+    margin-left: 30px;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.skills-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.skills-column:last-child {
+    margin-right: 0;
+}
+
+.skills-column h3 {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.skills-column ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills-column li {
+    position: relative;
+    padding-left: 20px; /* Adjust this value based on your gem size */
+    margin-bottom: 10px;
+    line-height: 1.2; /* Adjust as needed */
+}
+
+.skills-column li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px; /* Adjust based on your image size */
+    height: 12px; /* Adjust based on your image size */
+    background-image: url('images/gem.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Optional: add a hover effect */
+.skills-column li:hover::before {
+    opacity: 0.7;
+    background-color: url('images/stars.svg');
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-description {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .about-img {
+        margin-left: 0;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills-column {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+.projects-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 300px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-title {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.project-description {
+    margin: 0 0 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #004499;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%;
+    }
+}
+.experience-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.experience-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experience-sidebar {
+    width: 200px;
+    padding-right: 20px;
+}
+
+.sidebar-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.sidebar-button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0066cc;
+    transition: width 0.3s ease;
+}
+
+.sidebar-button:hover,
+.sidebar-button.active {
+    color: #0066cc;
+}
+
+.sidebar-button:hover::after,
+.sidebar-button.active::after {
+    width: 100%;
+}
+
+.experience-content {
+    flex-grow: 1;
+}
+
+.experience-category {
+    display: none;
+}
+
+.experience-category.active {
+    display: block;
+}
+
+.experience-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.experience-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.experience-item p {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+    }
+
+    .experience-sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sidebar-button {
+        display: inline-block;
+        width: auto;
+        margin-right: 20px;
+    }
+}
