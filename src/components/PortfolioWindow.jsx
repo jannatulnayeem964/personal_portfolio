@@ -29,12 +29,6 @@ const PortfolioWindow = ({onClose}) => {
             tech: "Python, TensorFlow, Keras",
             description: 'Trained CNN model on MNIST dataset achieving 98% accuracy in handwritten digit recognition',
             link: 'https://github.com/jannatulnayeem964/Handwritten-Digit-Classifier-with-CNN.git'
-        },
-        {
-            name: 'Personal Portfolio Website',
-            tech: "React, CSS, JavaScript",
-            description: 'Developed a responsive personal portfolio website to showcase projects and skills',
-            link: ''
         }
     ];
 
