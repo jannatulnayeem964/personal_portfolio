@@ -7,10 +7,34 @@ const PortfolioWindow = ({onClose}) => {
 
     const projects = [
         {
-            name: 'Project One',
-            tech: "React, Node.js",
-            description: 'A web application that does something interesting.',
-            link: 'https://example.com/project-one'
+            name: 'Safefier - AI Safety and Filtering System',
+            tech: "Next.js, FastAPI, Tailwind, Gemini API",
+            description: 'Safefier acts as a “responsible parent” for AI chatbots, sitting between the user and the model to detect and replace unsafe responses. The project showcases how a minimal safety layer can meaningfully reduce harm without replacing the underlying AI.',
+            link: 'https://github.com/NazimTheAllFather/Patriot_Hacks_2025.git'
+        }, 
+        {
+            name: 'Bias Detection Framework for LLMs',
+            tech: "LangTest, Hugging Face, Python",
+            description: 'Built reproducible evaluation scripts to quantify demographic bias and performance disparities, supporting systematic AI fairness analysis',
+            link: 'https://github.com/BTT-Relativity1B/Main.git'
+        },
+        {
+            name: 'Quizly - Full-Stack Study Tool',
+            tech: "React, Node.js, FastAPI, OpenAI API",
+            description: 'An intelligent flashcard generation platform that generates flashcards from PDFs or text',
+            link: 'https://github.com/BTT-Relativity1B/Main.git'
+        }, 
+        {
+            name: 'Image Classification with CNNs (MNIST)',
+            tech: "Python, TensorFlow, Keras",
+            description: 'Trained CNN model on MNIST dataset achieving 98% accuracy in handwritten digit recognition',
+            link: 'https://github.com/jannatulnayeem964/Handwritten-Digit-Classifier-with-CNN.git'
+        },
+        {
+            name: 'Personal Portfolio Website',
+            tech: "React, CSS, JavaScript",
+            description: 'Developed a responsive personal portfolio website to showcase projects and skills',
+            link: ''
         }
     ];
 
